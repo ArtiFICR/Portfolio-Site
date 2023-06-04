@@ -1,0 +1,88 @@
+.introductionContainer {
+    font-size: medium;
+    display: grid;
+    grid-template-rows: 5rem auto;
+    grid-template-columns: 100px auto;
+    grid-template-areas:
+        ". . . . . ." 
+        ". header . . image image"
+        ". title . . image image"
+        ". introduction introduction . image image"
+        ". . . . image image";
+    color: #cad4f1;
+    align-content: center;
+    justify-content: center;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+img {
+    background-color: transparent;
+    grid-area: image;
+    width: 70%;
+    height: auto;
+}
+
+.introductionText {
+    grid-area: introduction;
+    font-size: 25px;
+}
+
+.introductionImage {
+    background-color: transparent
+}
+
+.nameContainer {
+    grid-area: header;
+    font-size: 40px;
+}
+
+.titleContainer {
+    grid-area: title;
+}
+
+@media only screen and (max-width: 767px) {
+    .introductionContainer {
+        font-size: small;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-areas:
+            ". image ." 
+            ". . ."
+            ". header ."
+            ". title ."
+            ". introduction ."
+            ". . .";
+        color: #cad4f1;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+    }
+
+    img {
+        background-color: transparent;
+        grid-area: image;
+        width: 70%;
+        height: auto;
+    }
+    
+    .introductionText {
+        grid-area: introduction;
+        font-size: 15px;
+    }
+    
+    .introductionImage {
+        background-color: transparent
+    }
+    
+    .nameContainer {
+        grid-area: header;
+        font-size: 30px;
+    }
+    
+    .titleContainer {
+        grid-area: title;
+    }
+}  

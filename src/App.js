@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, { useRef } from "react";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/header/Header.component';
+import Introduction from './components/Introduction/Introduction.component';
+import AboutMe from './components/aboutme/AboutMe.component';
+import Projects from './components/projects/Projects.component';
+import Skills from './components/skills/Skills.component';
+import Contact from './components/contact/Contact.component';
+
+const App = () => {
+
+    const aboutRef = useRef();
+    const skillsRef = useRef();
+    const projectsRef = useRef();
+    const contactRef = useRef();
+
+    return (
+        <div className="App">
+            <Header aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} contactRef={contactRef} />
+            <Introduction />
+            <AboutMe innerRef={aboutRef} />
+            <Skills innerRef={skillsRef} />
+            <Projects innerRef={projectsRef} />
+            <Contact innerRef={contactRef} />
+        </div>
+    );
 }
 
 export default App;

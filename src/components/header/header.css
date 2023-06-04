@@ -1,0 +1,96 @@
+.header-bar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr fill;
+    justify-content: left;
+    background-color: #000066;
+    color: #cad4f1;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+    .aboutIcon, .skillsIcon, .projectsIcon, .contactIcon {
+        display: none;
+    }
+}
+
+button {
+    background: none;
+    color: #cad4f1;
+    border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.header-item {
+    text-align: center;
+    padding-left: 1rem;
+    text-decoration: none;
+}
+
+.aboutHeaderContainer, .skillsHeaderContainer,.projectsHeaderContainer, .contactHeaderContainer {
+    font-size: small;
+    margin-left: 1vw;
+}
+
+.aboutHeaderContainer {
+    grid-column: 1;
+}
+
+.skillsHeaderContainer {
+    grid-column: 2;
+}
+
+.projectsHeaderContainer {
+    grid-column: 3;
+}
+
+.contactHeaderContainer {
+    grid-column: 4;
+}
+
+@media only screen and (max-width: 767px) {
+    .header-bar {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "aboutImage skillsImage projectsImage contactImage";
+        justify-content: space-evenly;
+        background-color: #000066;
+        color: #cad4f1;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    }
+
+    .aboutIcon, .skillsIcon, .projectsIcon, .contactIcon {
+        filter: invert(90%);
+        width: 25px;
+        height: 25px;
+        background: none;
+    }
+
+    .aboutIcon {
+        grid-area: aboutImage;
+    }
+
+    .skillsIcon {
+        grid-area: skillsImage;
+    }
+
+    .projectsIcon {
+        grid-area: projectsImage;
+    }
+
+    .contactIcon {
+        grid-area: contactImage;
+    }
+
+    .headerText {
+        display: none;
+    }
+}

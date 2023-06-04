@@ -1,0 +1,70 @@
+.contactContainer {
+    display: grid;
+    color: #cad4f1;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    grid-template-columns: auto;
+    grid-template-rows: 5rem auto;
+    grid-template-areas: 
+        ". . ."
+        ". card ."
+}
+
+.cardContainer {
+    border: 0px solid #cad4f1;
+    display: grid;
+    grid-area: card;
+    grid-template-areas: 
+        ". header ."
+        ". email ."
+        "linkedIn emailLink github ";
+    margin-bottom: 2rem;
+    height: 15rem;
+}
+
+.headerContainer {
+    grid-area: header;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.emailContainer {
+    grid-area: email;
+}
+
+.linkedinLink {
+    grid-area: linkedIn;
+}
+
+.emailLink {
+    grid-area: emailLink;
+}
+
+.githubLink {
+    grid-area: github;
+}
+
+.linkedinLink:link, .linkedinLink:visited, .githubLink:link, .githubLink:visited, .emailLink:link, .emailLink:visited { 
+    text-decoration: none; 
+    color: #cad4f1;
+}
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+@media only screen and (max-width: 767px) {
+    .cardContainer {
+        border: 0px solid #cad4f1;
+        display: grid;
+        grid-area: card;
+        grid-template-areas: 
+            ". header ."
+            ". email ."
+            ". linkedIn ."
+            ". emailLink ."
+            ". github .";
+        margin-bottom: 2rem;
+        height: 15rem;
+    }
+}

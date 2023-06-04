@@ -1,0 +1,168 @@
+.skillsContainer {
+    color: #cad4f1;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5rem auto;
+    align-content: space-evenly;
+    grid-gap: 5rem 0;
+    place-items: center;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    margin-bottom: 3rem;
+    grid-template-areas: 
+        ". . . . ."
+        ". . header . ."
+        ". react nodejs scrypto ."
+        ". htmlLogo expressjs solidity ."
+        ". cssLogo python github ."
+        ". javascript sqlLogo azureLogo .";
+}
+
+img {
+    background: #bcccfd;
+}
+
+.skillsCardContainer {
+    align-items: center;
+    justify-items: center;
+}
+
+.skillsHeader {
+    align-items: center;
+    color: #cad4f1;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    font-size: xx-large;
+}
+
+.skillsTitle {
+    align-items: center;
+    color: #cad4f1;
+}
+
+.skillsLogo {
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-content: center;
+    background-color: #cad4f1;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px rgb(138, 167, 233);
+}
+
+@media only screen and (max-width: 767px) {
+    .reactCardContainer, 
+    .htmlCardContainer, 
+    .cssCardContainer, 
+    .jsCardContainer, 
+    .nodeCardContainer, 
+    .expressCardContainer, 
+    .pythonCardContainer, 
+    .sqlCardContainer, 
+    .scryptoCardContainer,
+    .solidityCardContainer ,
+    .githubCardContainer, 
+    .azureCardContainer,
+    .skillsLogo {
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .reactCardContainer, 
+    .htmlCardContainer, 
+    .cssCardContainer, 
+    .jsCardContainer, 
+    .nodeCardContainer, 
+    .expressCardContainer, 
+    .pythonCardContainer, 
+    .sqlCardContainer, 
+    .scryptoCardContainer,
+    .solidityCardContainer ,
+    .githubCardContainer, 
+    .azureCardContainer,
+    .skillsLogo {
+        height: 100px;
+        width: 100px;
+        justify-content: center;
+    }
+}
+
+.reactCardContainer, .htmlCardContainer, .cssCardContainer, .jsCardContainer, .githubCardContainer {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.reactCardContainer, 
+.htmlCardContainer, 
+.cssCardContainer, 
+.jsCardContainer, 
+.nodeCardContainer, 
+.expressCardContainer, 
+.pythonCardContainer, 
+.sqlCardContainer, 
+.scryptoCardContainer,
+.solidityCardContainer ,
+.githubCardContainer, 
+.azureCardContainer
+{
+    background-color: none;
+}
+
+.skillsHeader {
+    grid-area: header;
+}
+
+.reactCardContainer {
+    grid-area: react;
+}
+
+.nodeCardContainer {
+    grid-area: nodejs;
+}
+
+.scryptoCardContainer {
+    grid-area: scrypto;
+}
+
+.htmlCardContainer {
+    grid-area: htmlLogo;
+}
+
+.expressCardContainer {
+    grid-area: expressjs;
+}
+
+.solidityCardContainer {
+    grid-area: solidity;
+}
+
+.cssCardContainer {
+    grid-area: cssLogo;
+}
+
+.pythonCardContainer {
+    grid-area: python;
+}
+
+.githubCardContainer {
+    grid-area: github;
+}
+
+.jsCardContainer {
+    grid-area: javascript;
+}
+
+.sqlCardContainer {
+    grid-area: sqlLogo;
+}
+
+.azureCardContainer {
+    grid-area: azureLogo;
+}
+
+@media only screen and (max-width: 767px) {
+    .skillsTitle {
+        font-size: 15px;
+    }
+}

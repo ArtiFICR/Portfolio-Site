@@ -1,0 +1,154 @@
+.projectContainer {
+    color: rgb(49, 94, 145);
+    display: grid;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    grid-template-rows: 12rem auto 5rem auto 5rem auto;
+    grid-template-areas: 
+        ". . . . ."
+        ". . header . ."
+        ". . . . ."
+        ". projectOne . projectTwo ."
+        ". . . . ."
+        ". projectThree . projectFour .";
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+}
+
+.projectHeader {
+    grid-area: header;
+    color: #cad4f1;
+}
+
+.cardLogo {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    grid-area: cardIcon;
+}
+
+.projectOneContainer, .projectTwoContainer, .projectThreeContainer, .projectFourContainer {
+    margin: 1rem 0;
+    border-radius: 5px;
+    background-color: #cad4f1;
+    text-decoration: none; 
+    width: 80%;
+    height: 100%;
+    justify-items: center;
+}
+
+.projectOneContainer {
+    grid-area: projectOne;
+}
+
+.projectTwoContainer {
+    grid-area: projectTwo;
+}
+
+.projectThreeContainer {
+    grid-area: projectThree;
+}
+
+.projectFourContainer {
+    grid-area: projectFour;
+}
+
+a:link { 
+    text-decoration: none; 
+    color: rgb(29, 56, 87);
+}
+
+a:visited { 
+    text-decoration: none; 
+    color: rgb(29, 56, 87); 
+}
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
+
+.projectCardContainer a:visited {
+    color: rgb(29, 56, 87);
+}
+
+.anchorContainer {
+    display: grid;
+    grid-template-areas: 
+        ". cardIcon ."
+        "borderLine borderLine borderLine"
+        ". title ."
+        "description description description";
+}
+
+.borderLine {
+    grid-area: borderLine;
+    border-top: 1px solid rgb(29, 56, 87);
+}
+
+.projectTitle {
+    font-weight: bold;
+    font-size: large;
+    grid-area: title;
+}
+
+.projectDescription {
+    grid-area: description;
+    font-size: x-large;
+    padding: 0 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+    .projectContainer {
+        grid-template-rows: 5rem auto;
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-areas:
+            ". . ." 
+            ". header. "
+            ". projectOne. "
+            ". projectTwo ."
+            ". projectThree ."
+            ". projectFour .";
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+    }
+
+    .anchorContainer {
+        display: grid;
+        grid-template-areas: 
+            ". cardIcon ."
+            "borderLine borderLine borderLine"
+            ". title ."
+            "description description description";
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+    }
+
+    .projectOneContainer, .projectTwoContainer, .projectThreeContainer, .projectFourContainer {
+        margin: 1rem 0;
+        border-radius: 5px;
+        background-color: #cad4f1;
+        text-decoration: none; 
+        width: 90%;
+        height: 95%;
+        justify-items: center;
+    }
+
+    .cardLogo {
+        height: 100px;
+        width: 100px;
+    }
+
+    .projectTitle {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .projectDescription {
+        font-size: 15px;
+    }
+}

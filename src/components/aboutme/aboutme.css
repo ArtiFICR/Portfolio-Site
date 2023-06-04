@@ -1,0 +1,73 @@
+.aboutmeContainer {
+    color: #cad4f1;
+    display: grid;
+    grid-template-rows: 5rem auto;
+    grid-template-columns: 1fr 1fr 80% 1fr;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    align-content: center;
+    grid-template-areas:
+        ". . . ."
+        ". header . ."
+        "borderRight paragraphOne paragraphOne ."
+        "borderRight paragraphTwo paragraphTwo .";
+}
+
+.rightBorder {
+    grid-area: borderRight;
+    border-right: 1px solid rgb(224, 224, 224);
+}
+
+.paragraphOne {
+    grid-area: paragraphOne;
+    font-size: larger;
+}
+
+.paragraphTwo {
+    grid-area: paragraphTwo;
+    font-size: larger;
+}
+
+.aboutmeHeader {
+    grid-area: header;
+    font-size: large;
+    width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .aboutmeContainer {
+        color: #cad4f1;
+        display: grid;
+        grid-template-rows: 5rem auto;
+        grid-template-columns: 1fr 1fr 80% 1fr 1fr;
+        font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+        align-content: center;
+        grid-template-areas:
+            ". . . . ."
+            ". . header . ."
+            "borderRight paragraphOne paragraphOne paragraphOne ."
+            "borderRight paragraphTwo paragraphTwo paragraphTwo .";
+    }
+    
+    .paragraphOne, .paragraphTwo {
+        font-size: 15px;
+    }
+
+    .rightBorder {
+        grid-area: borderRight;
+        border-right: 1px solid rgb(224, 224, 224);
+    }
+    
+    .paragraphOne {
+        grid-area: paragraphOne;
+    }
+    
+    .paragraphTwo {
+        grid-area: paragraphTwo;
+    }
+    
+    .aboutmeHeader {
+        grid-area: header;
+        font-size: 30px;
+        width: 100%;
+    }
+}
