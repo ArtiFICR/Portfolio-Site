@@ -14,7 +14,8 @@
         ". react nodejs scrypto ."
         ". htmlLogo expressjs solidity ."
         ". cssLogo python github ."
-        ". javascript sqlLogo azureLogo .";
+        ". javascript sqlLogo azureLogo ."
+        ". . rustLogo . .";
 }
 
 img {
@@ -159,6 +160,10 @@ img {
 
 .azureCardContainer {
     grid-area: azureLogo;
+}
+
+.rustCardContainer {
+    grid-area: rustLogo;
 }
 
 @media only screen and (max-width: 767px) {

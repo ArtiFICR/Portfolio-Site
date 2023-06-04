@@ -12,6 +12,7 @@ import GithubLogo from "../../assets/githublogo.png";
 import AzureLogo from "../../assets/azurelogo.png";
 import SolidityLogo from "../../assets/soliditylogo.png";
 import ScryptoLogo from "../../assets/scryptologo.png";
+import RustLogo from "../../assets/rustlogo.png";
 
 import "./skills.css";
 
@@ -66,6 +67,10 @@ const Skills = React.forwardRef(({ innerRef }, prop) => {
             <div className="azureCardContainer">
                 <p className="skillsTitle">Azure</p>
                 <img src={AzureLogo} alt="ms azure" className="skillsLogo"></img>
+            </div>
+            <div className="rustCardContainer">
+                <p className="skillsTitle">Rust</p>
+                <img src={RustLogo} alt="rust" className="skillsLogo"></img>
             </div>
         </div>
     )
